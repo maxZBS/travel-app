@@ -1,4 +1,4 @@
-import { useRouter } from 'next/dist/client/router'
+import { useRouter } from 'next/router'
 import styles from './Footer.module.scss'
 
 const navItems = [
@@ -12,7 +12,7 @@ const navItems = [
 	},
 	{
 		icon: 'place',
-		link: '/place',
+		link: '/place/kyoto',
 	},
 	{
 		icon: 'person_outline',
