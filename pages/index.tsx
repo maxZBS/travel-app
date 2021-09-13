@@ -1,7 +1,24 @@
-import Footer from '../app/components/common/footer/Footer'
+import { GetServerSideProps, GetStaticProps, NextPage } from 'next'
 import Layout from '../app/components/common/Layout'
-import styles from '../assets/styles/Home.module.css'
+import { IPlace } from '../app/types/place'
 
-export default function Home() {
-	return <Layout>Home page</Layout>
+interface IHome {
+	places: IPlace[]
 }
+
+const Home: NextPage<IHome> = ({ places }) => {
+	return <Layout>{places.map(place => place.location)}</Layout>
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+	const result = await fetch('http://localhost:3000/api/places')
+	const places = await result.json()
+
+	return {
+		props: {
+			places,
+		},
+	}
+}
+
+export default Home
