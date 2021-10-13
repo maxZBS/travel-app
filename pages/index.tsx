@@ -11,7 +11,9 @@ interface IHome {
 const Home: NextPage<IHome> = ({ places }) => {
 	return (
 		<Layout>
-			<SearchSection />
+			<div style={{ width: '80%', margin: '0 auto' }}>
+				<SearchSection />
+			</div>
 		</Layout>
 	)
 }

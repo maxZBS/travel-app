@@ -1,0 +1,38 @@
+@import '../../../../assets/styles/variables';
+
+.search {
+	background-color: rgba(255, 255, 255, 0.06);
+	border: 1px solid transparent;
+	transition: border 0.4s ease;
+
+	border-radius: 30px;
+	width: 100%;
+
+	padding: 0 1rem;
+	margin-bottom: 1.5rem;
+
+	display: flex;
+	align-items: center;
+
+	&:focus-within {
+		border-color: rgba($accent, 0.5);
+	}
+
+	> span {
+		margin-right: 10px;
+		color: $white;
+		opacity: 0.8;
+	}
+
+	> input {
+		padding: 1rem 0;
+		background-color: transparent;
+		outline: none;
+		font-size: 15px;
+		color: $white;
+
+		&::placeholder {
+			color: #515054;
+		}
+	}
+}
