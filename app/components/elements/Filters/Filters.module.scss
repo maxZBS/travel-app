@@ -1,0 +1,33 @@
+@import '../../../../assets/styles/variables';
+
+.wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+
+	> button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		border-radius: 30px;
+		border: 2px solid rgba($gray, 0.2);
+		transition: border 0.4s ease;
+		color: $white;
+
+		font-size: 15px;
+		min-width: 90px;
+		padding: 0.7rem 1.6rem;
+		margin-right: 0.5rem;
+		margin-bottom: 0.5rem;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&.active {
+			border-color: rgba($accent, 0.5);
+		}
+	}
+}

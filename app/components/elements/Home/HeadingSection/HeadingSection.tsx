@@ -1,11 +1,9 @@
 import { FC } from 'react'
-import Filters from '../../Filters/Filters'
-import Search from '../../Search/Search'
-import styles from './SearchSection.module.scss'
+import styles from './HeadingSection.module.scss'
 
 import mapImg from '../../../../../assets/images/map.png'
 
-const SearchSection: FC = () => {
+const HeadingSection: FC = () => {
 	return (
 		<section
 			className={styles.section}
@@ -13,11 +11,9 @@ const SearchSection: FC = () => {
 		>
 			<div>
 				<h1>best places for trip</h1>
-				<Search />
-				<Filters />
 			</div>
 		</section>
 	)
 }
 
-export default SearchSection
+export default HeadingSection
