@@ -1,1 +1,6 @@
 [] - Get cities for filters from server exists places
+[] - Database
+[] - Mini admin panel
+[] - Fav places
+[] - Book trip and create row DB
+[] - List booked trips in admin page

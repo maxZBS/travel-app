@@ -1,15 +1,16 @@
 import React from 'react'
-import Layout from '../../app/components/common/Layout'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import { API_URL } from '../../app/constants'
 import { IPlace } from '../../app/types/place'
+
+import Place from '../../app/components/screens/place/Place'
 
 interface IPlacePage {
 	place: IPlace
 }
 
-const Place: NextPage<IPlacePage> = ({ place }) => {
-	return <Layout>Place {place.slug}</Layout>
+const PlacePage: NextPage<IPlacePage> = ({ place }) => {
+	return <Place place={place} />
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -30,4 +31,4 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 	return { props: { place } }
 }
 
-export default Place
+export default PlacePage
