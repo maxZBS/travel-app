@@ -7,7 +7,7 @@ import { IPlace } from '../app/types/place'
 import HeadingSection from '../app/components/elements/Home/HeadingSection/HeadingSection'
 import Search from '../app/components/elements/Search/Search'
 import Filters from '../app/components/elements/Filters/Filters'
-import { API_URL } from '../app/contstants'
+import { API_URL } from '../app/constants'
 import PopularPlaces from '../app/components/elements/Home/PopularPlaces/PopularPlaces'
 
 interface IHome {

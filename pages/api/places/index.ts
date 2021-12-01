@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next'
-import { IPlace } from '../../app/types/place'
+import { IPlace } from '../../../app/types/place'
 
-const places: IPlace[] = [
+export const places: IPlace[] = [
 	{
 		slug: 'tokyo',
 		description: 'wefwewegewwefew',
