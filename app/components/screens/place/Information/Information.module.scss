@@ -1,0 +1,64 @@
+@import '../../../../../assets/styles/variables';
+
+.wrapper {
+	border-radius: 15px;
+	padding: 1.5rem;
+	background-color: rgba(255, 255, 255, 0.05);
+	width: 80%;
+	margin: 3rem auto 0;
+
+	.heading {
+		display: flex;
+		align-items: center;
+		margin-bottom: 2rem;
+
+		> h1 {
+			color: $white;
+			font-size: 22px;
+			margin: 0;
+			margin-left: 1rem;
+		}
+	}
+
+	> p {
+		color: $white;
+		opacity: 0.8;
+		line-height: 1.66;
+	}
+
+	.additional {
+		margin-top: 2rem;
+		display: flex;
+		align-items: center;
+
+		.rating {
+			margin-right: 2rem;
+			display: flex;
+			align-items: center;
+			padding: 10px 15px;
+			border-radius: 30px;
+			border: 2px solid rgba(255, 255, 255, 0.04);
+
+			> span {
+				color: $white;
+				font-weight: bold;
+				margin-left: 0.5rem;
+			}
+		}
+
+		.duration {
+			margin-right: 2rem;
+			display: flex;
+			align-items: center;
+			padding: 10px 15px;
+			border-radius: 30px;
+			border: 2px solid rgba(255, 255, 255, 0.04);
+
+			> span {
+				color: $white;
+				font-weight: bold;
+				margin-left: 0.5rem;
+			}
+		}
+	}
+}

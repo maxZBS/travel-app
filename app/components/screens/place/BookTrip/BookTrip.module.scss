@@ -12,6 +12,7 @@
 	padding: 7px 24px;
 	padding-right: 7px;
 	transition: background-color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+	margin: 3rem auto 0;
 
 	&:hover {
 		background-color: lighten($accent, 4%);

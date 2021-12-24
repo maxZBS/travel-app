@@ -4,7 +4,8 @@ import { IPlace } from '../../../app/types/place'
 export const places: IPlace[] = [
 	{
 		slug: 'tokyo',
-		description: 'wefwewegewwefew',
+		description:
+			'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,',
 		imagePath: 'http://localhost:3000/images/places/japan.jpg',
 		location: { country: 'Japan', city: 'Kyoto' },
 		rating: 5,
@@ -15,7 +16,8 @@ export const places: IPlace[] = [
 	},
 	{
 		slug: 'venezia',
-		description: 'wefwewegewwefew',
+		description:
+			'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,',
 		imagePath: 'http://localhost:3000/images/places/italy.jpg',
 		location: { country: 'Italy', city: 'Venezia' },
 		rating: 5,
