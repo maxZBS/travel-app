@@ -1,0 +1,49 @@
+@import '../../../../../assets/styles/variables';
+
+.wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 80%;
+	margin: 2rem auto 0;
+
+	.buttonWrapper {
+		border-radius: 50%;
+		width: 55px;
+		height: 55px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		background-color: rgba(255, 255, 255, 0.05);
+	}
+
+	.bookmark {
+		position: relative;
+
+		> ul {
+			position: absolute;
+			background-color: #222223;
+			border-radius: 15px;
+			padding: 1rem 0;
+			z-index: 2;
+			top: calc(100% + 10px);
+			right: 0;
+			width: max-content;
+			box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+
+			> li {
+				> a {
+					text-decoration: none;
+					color: $white;
+					display: block;
+					padding: 0.5rem 2rem;
+					transition: background-color 0.4s ease-in-out;
+
+					&:hover {
+						background-color: #1c1c1e;
+					}
+				}
+			}
+		}
+	}
+}
