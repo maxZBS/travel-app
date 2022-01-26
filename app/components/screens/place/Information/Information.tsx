@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { FaCalendar, FaMapMarkerAlt, FaStar } from 'react-icons/fa'
 
-import { IPlace } from '../../../../types/place'
+import { IPlace } from '@/types/place'
 import styles from './Information.module.scss'
 import Map from './Map'
 
@@ -27,7 +27,7 @@ const Information: FC<{ place: IPlace }> = ({ place }) => {
 				</div>
 			</div>
 
-			<Map />
+			<Map location={place.location} />
 		</div>
 	)
 }

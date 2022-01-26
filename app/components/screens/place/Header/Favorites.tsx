@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React, { FC, useState } from 'react'
 import { BsBookmarkHeart } from 'react-icons/bs'
-import { IFav } from '../../../../types/place'
+import { IFav } from '@/types/place'
 
 import styles from './Header.module.scss'
 
@@ -16,11 +16,11 @@ const data: IFav[] = [
 	},
 	{
 		name: 'Japan, Japan',
-		slug: 'tokyo',
+		slug: 'tokyo-1',
 	},
 	{
 		name: 'Italy, Italy',
-		slug: 'venezia',
+		slug: 'venezia-1',
 	},
 ]
 

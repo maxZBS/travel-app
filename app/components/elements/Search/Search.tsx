@@ -1,6 +1,6 @@
 import { ChangeEvent, FC, KeyboardEvent, useState } from 'react'
-import { TypeSetState } from '../../../types/common'
-import { IPlace } from '../../../types/place'
+import { TypeSetState } from '@/types/common'
+import { IPlace } from '@/types/place'
 import styles from './Search.module.scss'
 
 interface ISearch {

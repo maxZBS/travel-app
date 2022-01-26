@@ -1,3 +1,5 @@
+[] - Alias
+[] - Progress bar
 [] - Get cities for filters from server exists places
 [] - Database
 [] - Mini admin panel

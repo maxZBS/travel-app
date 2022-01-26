@@ -3,7 +3,7 @@ import { FC } from 'react'
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 
-import { IPlace } from '../../../../types/place'
+import { IPlace } from '@/types/place'
 import styles from './PopularPlaces.module.scss'
 
 interface IPopularPlaces {

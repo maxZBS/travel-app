@@ -1,7 +1,7 @@
 @import '../../../../assets/styles/variables';
 
 .search {
-	background-color: rgba(255, 255, 255, 0.06);
+	@include glassEffect;
 	border: 1px solid transparent;
 	transition: border 0.4s ease;
 

@@ -1,4 +1,4 @@
-import Layout from '../app/components/common/Layout'
+import Layout from '@/common/Layout'
 
 const Profile = () => {
 	return <Layout>Profile</Layout>

@@ -1,4 +1,4 @@
-type TypeLocation = {
+export type TypeLocation = {
 	city: string
 	country: string
 }
@@ -13,6 +13,7 @@ export interface IPlace {
 	distance: number
 	googleMapLink: string
 	mapImage: string
+	coordinates: [number, number]
 }
 
 export interface IFav {

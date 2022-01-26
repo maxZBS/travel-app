@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next'
-import { IPlace } from '../../../app/types/place'
+import { IPlace } from '@/types/place'
 
 export const places: IPlace[] = [
 	{
@@ -13,6 +13,7 @@ export const places: IPlace[] = [
 		distance: 10453,
 		googleMapLink: 'wefewf',
 		mapImage: 'egfw',
+		coordinates: [-58.3816, -34.6037],
 	},
 	{
 		slug: 'venezia',
@@ -25,6 +26,7 @@ export const places: IPlace[] = [
 		distance: 9453,
 		googleMapLink: 'wefewf',
 		mapImage: 'egfw',
+		coordinates: [-58.3816, -34.6037],
 	},
 ]
 
