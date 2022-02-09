@@ -1,8 +1,7 @@
-[] - Alias
-[] - Progress bar
-[] - Get cities for filters from server exists places
-[] - Database
-[] - Mini admin panel
+[] - Meta data SEO
+[] - Database (sanity)
+[] - Auth
+[] - Get places
 [] - Fav places
 [] - Book trip and create row DB
 [] - List booked trips in admin page
