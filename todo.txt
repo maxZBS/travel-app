@@ -1,6 +1,4 @@
-[] - Meta data SEO
-[] - Database (sanity)
-[] - Auth
+[] - Database (sanity) + Auth
 [] - Get places
 [] - Fav places
 [] - Book trip and create row DB
