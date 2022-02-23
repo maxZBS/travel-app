@@ -1,3 +1,6 @@
+[] - Compress image and change resolutuion
+[] - Add new data with sanity
+[] - Load from sanity
 [] - Database (sanity) + Auth
 [] - Get places
 [] - Fav places
