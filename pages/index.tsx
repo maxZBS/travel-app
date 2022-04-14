@@ -7,9 +7,11 @@ import { IPlace } from '@/types/place'
 import HeadingSection from '@/elements/Home/HeadingSection/HeadingSection'
 import Search from '@/elements/Search/Search'
 import Filters from '@/elements/Filters/Filters'
-import { API_URL } from '../app/constants'
 import PopularPlaces from '@/elements/Home/PopularPlaces/PopularPlaces'
 import Meta from 'utils/Meta'
+import { sanityClient } from '../app/sanity'
+
+const placeQuery = `*[_type == "place"]`
 
 interface IHome {
 	initialPlaces: IPlace[]
@@ -18,7 +20,7 @@ interface IHome {
 const Home: NextPage<IHome> = ({ initialPlaces }) => {
 	const [places, setPlaces] = useState(initialPlaces)
 	const [isLoading, setIsLoading] = useState(false)
-
+	
 	return (
 		<Layout>
 			<Meta
@@ -40,12 +42,11 @@ const Home: NextPage<IHome> = ({ initialPlaces }) => {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-	const result = await fetch(`${API_URL}/places`)
-	const initialPlaces = await result.json()
-
+	const result = await sanityClient.fetch(placeQuery)
+	
 	return {
 		props: {
-			initialPlaces,
+			initialPlaces: result,
 		},
 	}
 }
