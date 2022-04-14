@@ -1,8 +1,12 @@
-[] - Compress image and change resolutuion
-[] - Add new data with sanity
-[] - Load from sanity
-[] - Database (sanity) + Auth
-[] - Get places
+[x] - Compress image and change resolution
+[x] - Add new data with sanity
+[x] - Load from sanity
+[] - Get place
+[] - Auth
 [] - Fav places
 [] - Book trip and create row DB
 [] - List booked trips in admin page
+[] - Next.js 12
+[] - PWA + оптимизация
+
+https://www.youtube.com/watch?v=1WmNXEVia8I&t=5158s

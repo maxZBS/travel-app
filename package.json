@@ -11,6 +11,8 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
+		"@portabletext/react": "^1.0.6",
+		"@sanity/image-url": "^1.0.1",
 		"@types/classnames": "^2.3.1",
 		"lodash": "^4.17.21",
 		"material-icons": "^1.1.1",
@@ -22,6 +24,7 @@
 		"react-icons": "^4.3.1",
 		"react-loading-skeleton": "^3.0.1",
 		"react-simple-maps": "^2.3.0",
+		"sanity": "^2.29.3",
 		"sass": "^1.37.5"
 	},
 	"devDependencies": {
