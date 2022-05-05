@@ -1,7 +1,7 @@
 [x] - Compress image and change resolution
 [x] - Add new data with sanity
 [x] - Load from sanity
-[] - Get place
+[x] - Get place
 [] - Auth
 [] - Fav places
 [] - Book trip and create row DB

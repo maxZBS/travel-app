@@ -19,23 +19,25 @@ const PopularPlaces: FC<IPopularPlaces> = ({ places, isLoading }) => {
 			{isLoading ? (
 				<div
 					style={{
-						marginTop: '-2rem',
+						marginTop: '-2rem'
 					}}
 				>
 					<Skeleton
 						count={1}
 						height={200}
-						borderRadius='20px'
-						baseColor='#1b1b1d'
-						highlightColor='#2c2c2e'
+						borderRadius="20px"
+						baseColor="#1b1b1d"
+						highlightColor="#2c2c2e"
 					/>
 				</div>
 			) : places.length ? (
 				places.map(place => (
-					<Link href={`/place/${place.slug}`} key={place._id}>
+					<Link href={`/place/${place.slug.current}`} key={place._id}>
 						<a
 							className={styles.item}
-							style={{ backgroundImage: `url(${urlFor(place.imagePath).url()})` }}
+							style={{
+								backgroundImage: `url(${urlFor(place.imagePath).url()})`
+							}}
 						>
 							<span className={styles.heading}>
 								{place.location.city + ', ' + place.location.country}
@@ -49,7 +51,7 @@ const PopularPlaces: FC<IPopularPlaces> = ({ places, isLoading }) => {
 						marginTop: '-2rem',
 						color: '#e8e8e8',
 						opacity: '.6',
-						fontStyle: 'italic',
+						fontStyle: 'italic'
 					}}
 				>
 					Not found!

@@ -8,20 +8,20 @@ import styles from './Header.module.scss'
 const data: IFav[] = [
 	{
 		name: 'Japan, Japan',
-		slug: 'tokyo',
+		slug: 'tokyo'
 	},
 	{
 		name: 'Italy, Italy',
-		slug: 'venezia',
+		slug: 'venezia'
 	},
 	{
 		name: 'Japan, Japan',
-		slug: 'tokyo-1',
+		slug: 'tokyo-1'
 	},
 	{
 		name: 'Italy, Italy',
-		slug: 'venezia-1',
-	},
+		slug: 'venezia-1'
+	}
 ]
 
 const Favorites: FC = () => {
@@ -31,7 +31,7 @@ const Favorites: FC = () => {
 		<div className={styles.bookmark}>
 			<button onClick={() => setIsOpen(!isOpen)}>
 				<span className={styles.buttonWrapper}>
-					<BsBookmarkHeart size={20} color='#e8e8e8' />
+					<BsBookmarkHeart size={20} color="#e8e8e8" />
 				</span>
 			</button>
 			{isOpen && (

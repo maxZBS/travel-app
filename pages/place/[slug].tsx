@@ -1,9 +1,10 @@
 import React from 'react'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
-import { API_URL } from '../../app/constants'
 import { IPlace } from '@/types/place'
 
 import Place from '@/screens/place/Place'
+import { sanityClient } from '../../app/sanity'
+import { queries } from 'queries'
 
 interface IPlacePage {
 	place: IPlace
@@ -14,19 +15,17 @@ const PlacePage: NextPage<IPlacePage> = ({ place }) => {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-	const res = await fetch(`${API_URL}/places`)
-	const places = await res.json()
+	const result = await sanityClient.fetch(`${queries.getPlaces}{slug}`)
 
-	const paths = places.map(post => ({
-		params: { slug: post.slug },
+	const paths = result.map(place => ({
+		params: { slug: place.slug.current }
 	}))
 
-	return { paths, fallback: true }
+	return { paths, fallback: 'blocking' }
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-	const res = await fetch(`${API_URL}/places/${params.slug}`)
-	const place = await res.json()
+	const place = await sanityClient.fetch(queries.getPlace(String(params.slug)))
 
 	return { props: { place } }
 }
