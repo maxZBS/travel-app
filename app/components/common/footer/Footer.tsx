@@ -9,20 +9,20 @@ type TypeNavItem = {
 const navItems: TypeNavItem[] = [
 	{
 		icon: 'home',
-		link: '/',
+		link: '/'
 	},
 	{
 		icon: 'explore',
-		link: '/explore',
+		link: '/explore'
 	},
 	{
 		icon: 'place',
-		link: '/place/kyoto',
+		link: '/place/kyoto'
 	},
 	{
 		icon: 'person_outline',
-		link: '/profile',
-	},
+		link: '/auth'
+	}
 ]
 
 const Footer = () => {
@@ -37,7 +37,7 @@ const Footer = () => {
 						onClick={() => push(item.link)}
 						key={item.icon}
 					>
-						<span className='material-icons-outlined'>{item.icon}</span>
+						<span className="material-icons-outlined">{item.icon}</span>
 					</button>
 				))}
 			</nav>
