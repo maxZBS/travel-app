@@ -1,4 +1,5 @@
 import { signUpHandler } from 'next-auth-sanity'
-import { sanityClient } from '../../../app/sanity'
+import { sanityClientServer } from '../../../app/sanity.server'
 
-export default signUpHandler(sanityClient)
+// @ts-ignore
+export default signUpHandler(sanityClientServer)

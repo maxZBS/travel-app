@@ -2,7 +2,8 @@
 [x] - Add new data with sanity
 [x] - Load from sanity
 [x] - Get place
-[] - Auth
+[x] - Auth
+[] - AuthContext
 [] - Fav places
 [] - Book trip and create row DB
 [] - List booked trips in admin page

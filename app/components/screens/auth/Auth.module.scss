@@ -40,6 +40,15 @@
 	}
 }
 
+.changeType {
+	text-align: center;
+	margin-top: 20px;
+
+	> button {
+		color: #ccc;
+	}
+}
+
 .h1 {
 	color: $white;
 	text-align: center;

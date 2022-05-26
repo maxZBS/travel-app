@@ -1,8 +1,9 @@
-import { createClient, createPreviewSubscriptionHook } from 'next-sanity'
+import { ClientConfig, createClient, createPreviewSubscriptionHook } from 'next-sanity'
+
 import { PortableText as PortableTextComponent } from '@portabletext/react'
 import createImageUrlBuilder from '@sanity/image-url'
 
-const config = {
+export const config:ClientConfig = {
 	projectId: 'exug0mn7',
 	dataset: 'production',
 	token: process.env.SANITY_API_TOKEN,

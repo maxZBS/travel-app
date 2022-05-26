@@ -26,6 +26,7 @@
 		"react-icons": "^4.3.1",
 		"react-loading-skeleton": "^3.0.1",
 		"react-simple-maps": "^2.3.0",
+		"react-toastify": "^9.0.1",
 		"sanity": "^2.29.3",
 		"sass": "^1.37.5"
 	},
