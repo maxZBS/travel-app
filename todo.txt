@@ -3,7 +3,8 @@
 [x] - Load from sanity
 [x] - Get place
 [x] - Auth
-[] - AuthContext
+[] - AuthSession
+[] - Secure route
 [] - Fav places
 [] - Book trip and create row DB
 [] - List booked trips in admin page

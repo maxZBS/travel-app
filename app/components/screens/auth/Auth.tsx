@@ -1,14 +1,16 @@
-import Layout from '@/components/common/Layout'
 import { FC, useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
-import { CgProfile } from 'react-icons/cg'
-import { IAuthFields } from './auth.interface'
-
-import styles from './Auth.module.scss'
-import stylesButton from '../place/BookTrip/BookTrip.module.scss'
 import { signUp } from 'next-auth-sanity/dist/client'
 import { signIn } from 'next-auth/react'
 import { toast } from 'react-toastify'
+import { CgProfile } from 'react-icons/cg'
+
+import { IAuthFields } from './auth.interface'
+import Layout from '@/components/common/Layout'
+
+import styles from './Auth.module.scss'
+import stylesButton from '../place/BookTrip/BookTrip.module.scss'
+import { useRouter } from 'next/router'
 
 const Auth: FC = () => {
 	const [typeForm, setTypeForm] = useState<'login' | 'register'>('login')
@@ -23,6 +25,8 @@ const Auth: FC = () => {
 
 	const isReg = typeForm === 'register'
 
+	const { push } = useRouter()
+
 	const onSubmit: SubmitHandler<IAuthFields> = async data => {
 		if (isReg) {
 			const response = await signUp(data)
@@ -32,7 +36,12 @@ const Auth: FC = () => {
 				redirect: false,
 				...data
 			})
-			if (response.error) toast.error(response.error)
+			if (response.error) {
+				toast.error(response.error)
+				return
+			}
+
+			await push('/')
 		}
 	}
 
@@ -60,7 +69,7 @@ const Auth: FC = () => {
 						<div className={styles.error}>{errors.password}</div>
 					)}
 				</div>
-				<button className={stylesButton.button}>
+				<button className={stylesButton.button} type="submit">
 					<span className={stylesButton.text}>
 						{isReg ? 'Register' : 'Login'}
 					</span>
@@ -68,12 +77,12 @@ const Auth: FC = () => {
 						<CgProfile size="18" />
 					</span>
 				</button>
-				<div className={styles.changeType}>
-					<button onClick={() => setTypeForm(isReg ? 'login' : 'register')}>
-						I want {isReg ? 'login' : 'register'}
-					</button>
-				</div>
 			</form>
+			<div className={styles.changeType}>
+				<button onClick={() => setTypeForm(isReg ? 'login' : 'register')}>
+					I want {isReg ? 'login' : 'register'}
+				</button>
+			</div>
 		</Layout>
 	)
 }
