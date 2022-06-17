@@ -31,4 +31,18 @@
 			}
 		}
 	}
+
+	.go-to-login {
+		font-size: 1rem;
+		color: white;
+		padding: 0.7rem 1.5rem;
+		border: 1px solid rgba(white, 0.2);
+		border-radius: 30px;
+		transition: color 0.4s ease, border-color 0.4s ease;
+
+		&:hover {
+			color: $accent;
+			border-color: $accent;
+		}
+	}
 }

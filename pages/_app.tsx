@@ -4,6 +4,7 @@ import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import '@/assets/styles/globals.scss'
 import { SessionProvider } from 'next-auth/react'
+import AuthProvider from '../app/providers/AuthProvider/AuthProvider'
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
 	return (
@@ -15,8 +16,10 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
 				height={3}
 			/>
 			<SessionProvider session={session}>
-				<Component {...pageProps} />
-				<ToastContainer theme="dark" draggable={false} />
+				<AuthProvider Component={Component}>
+					<Component {...pageProps} />
+					<ToastContainer theme="dark" draggable={false} />
+				</AuthProvider>
 			</SessionProvider>
 		</>
 	)

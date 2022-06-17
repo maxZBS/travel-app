@@ -3,11 +3,11 @@
 [x] - Load from sanity
 [x] - Get place
 [x] - Auth
-[] - AuthSession
-[] - Secure route
+[x] - AuthSession
+[x] - Secure route
+[] - Footer icon home, fav, profile, exit
 [] - Fav places
 [] - Book trip and create row DB
-[] - List booked trips in admin page
 [] - Next.js 12
 [] - PWA + оптимизация
 
