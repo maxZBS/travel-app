@@ -1,11 +1,10 @@
-import Link from 'next/link'
 import { FC } from 'react'
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 
 import { IPlace } from '@/types/place'
 import styles from './PopularPlaces.module.scss'
-import { urlFor } from '../../../../sanity'
+import PlaceItem from '@/elements/Home/PopularPlaces/PlaceItem'
 
 interface IPopularPlaces {
 	places: IPlace[]
@@ -31,20 +30,7 @@ const PopularPlaces: FC<IPopularPlaces> = ({ places, isLoading }) => {
 					/>
 				</div>
 			) : places.length ? (
-				places.map(place => (
-					<Link href={`/place/${place.slug.current}`} key={place._id}>
-						<a
-							className={styles.item}
-							style={{
-								backgroundImage: `url(${urlFor(place.imagePath).url()})`
-							}}
-						>
-							<span className={styles.heading}>
-								{place.location.city + ', ' + place.location.country}
-							</span>
-						</a>
-					</Link>
-				))
+				places.map(place => <PlaceItem key={place._id} place={place} />)
 			) : (
 				<div
 					style={{

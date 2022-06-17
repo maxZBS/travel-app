@@ -47,7 +47,7 @@ const Auth: FC = () => {
 
 	return (
 		<Layout>
-			<h1 className={styles.h1}>Auth/{isReg ? 'Register' : 'login'}</h1>
+			<h1 className="h1">Auth/{isReg ? 'Register' : 'login'}</h1>
 			<form onSubmit={handleSubmit(onSubmit)}>
 				<div className={styles.wrapper}>
 					<input

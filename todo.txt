@@ -5,8 +5,11 @@
 [x] - Auth
 [x] - AuthSession
 [x] - Secure route
-[] - Footer icon home, fav, profile, exit
+[x] - Footer icon home, fav, profile, exit
 [] - Fav places
+		[] - Add
+		[] - View
+		[] - Remove
 [] - Book trip and create row DB
 [] - Next.js 12
 [] - PWA + оптимизация

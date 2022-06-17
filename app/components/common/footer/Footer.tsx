@@ -14,15 +14,15 @@ const navItems: TypeNavItem[] = [
 		link: '/'
 	},
 	{
-		icon: 'explore',
-		link: '/explore'
+		icon: 'favorite_outline',
+		link: '/favorites'
 	},
 	{
-		icon: 'place',
-		link: '/place/kyoto'
+		icon: 'account_circle',
+		link: '/profile'
 	},
 	{
-		icon: 'person_outline',
+		icon: 'logout',
 		link: '/auth'
 	}
 ]
@@ -40,14 +40,12 @@ const Footer = () => {
 					navItems.map(item => (
 						<button
 							className={pathname === item.link ? styles.active : ''}
-							onClick={() => {
-								item.link === '/auth' && data ? signOut() : push(item.link)
+							onClick={async () => {
+								item.link === '/auth' ? await signOut() : await push(item.link)
 							}}
 							key={item.icon}
 						>
-							<span className="material-icons-outlined">
-								{item.link === '/auth' && data ? 'logout' : item.icon}
-							</span>
+							<span className="material-icons-outlined">{item.icon}</span>
 						</button>
 					))
 				) : (
