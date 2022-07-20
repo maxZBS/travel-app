@@ -11,7 +11,9 @@
 		[] - View
 		[] - Remove
 [] - Book trip and create row DB
+[] - Change styles place page
 [] - Next.js 12
-[] - PWA + оптимизация
+[] - Fix map
+[] - PWA + lighthouse оптимизация
 
 https://www.youtube.com/watch?v=1WmNXEVia8I&t=5158s

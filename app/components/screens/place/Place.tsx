@@ -22,7 +22,7 @@ const Place: FC<IPlacePage> = ({ place }) => {
 				image={urlFor(place.imagePath).url()}
 			/>
 			<Wrapper imagePath={urlFor(place.imagePath).url()}>
-				<Header />
+				<Header _id={place._id} />
 				<Information place={place} />
 				<BookTrip />
 			</Wrapper>
