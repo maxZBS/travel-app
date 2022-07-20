@@ -23,7 +23,7 @@
 		"react": "17.0.2",
 		"react-dom": "17.0.2",
 		"react-hook-form": "^7.30.0",
-		"react-icons": "^4.3.1",
+		"react-icons": "^4.4.0",
 		"react-loading-skeleton": "^3.0.1",
 		"react-simple-maps": "^2.3.0",
 		"react-toastify": "^9.0.1",

@@ -3,7 +3,7 @@ import { GetStaticProps } from 'next'
 import { sanityClient } from '../app/sanity'
 import { queries } from '../app/queries'
 
-const FavouritesPage = ({ places }) => {
+const FavoritesPage = ({ places }) => {
 	return <Favorites places={places} />
 }
 
@@ -17,4 +17,6 @@ export const getStaticProps: GetStaticProps = async () => {
 	}
 }
 
-export default FavouritesPage
+FavoritesPage.isOnlyUser = true
+
+export default FavoritesPage

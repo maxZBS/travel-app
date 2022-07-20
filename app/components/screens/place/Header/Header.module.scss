@@ -16,6 +16,13 @@
 		align-items: center;
 		justify-content: center;
 		@include glassEffect;
+		color: #e8e8e8;
+		font-size: 1.6em;
+		transition: color 0.4s ease-in-out;
+
+		&:hover {
+			color: $accent;
+		}
 	}
 
 	.bookmark {
