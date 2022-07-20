@@ -6,9 +6,9 @@
 [x] - AuthSession
 [x] - Secure route
 [x] - Footer icon home, fav, profile, exit
-[] - Fav places
+[x] - Fav places
 		[] - Add
-		[] - View
+		[x] - View
 		[] - Remove
 [] - Book trip and create row DB
 [] - Change styles place page

@@ -49,7 +49,7 @@ export const useFavorites = (placeId: string) => {
 
 	const toggleFavorite = useCallback(async () => {
 		setIsLoading(true)
-		if (checkFavorite(placeId)) await removeFromFavorites()
+		if (!checkFavorite(placeId)) await removeFromFavorites()
 		else await addToFavorites()
 	}, [currentFavoriteId, placeId])
 

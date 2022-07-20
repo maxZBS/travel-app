@@ -11,5 +11,8 @@ module.exports = {
 	env: {
 		APP_URL: 'http://localhost:3000'
 	},
-	rewrites: () => [STUDIO_REWRITE]
+	rewrites: () => [STUDIO_REWRITE],
+	images: {
+		domains: ['cdn.sanity.io']
+	}
 }
