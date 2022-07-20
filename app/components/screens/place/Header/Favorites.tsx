@@ -5,11 +5,11 @@ import styles from './Header.module.scss'
 import { useFavorites } from '@/screens/favorites/useFavorites'
 
 const Favorites: FC<{ _id: string }> = ({ _id }) => {
-	const { checkFavorite } = useFavorites()
+	const { checkFavorite, toggleFavorite, isLoading } = useFavorites(_id)
 
 	return (
 		<div className={styles.bookmark}>
-			<button onClick={() => {}}>
+			<button onClick={toggleFavorite} disabled={isLoading}>
 				<span className={styles.buttonWrapper}>
 					{checkFavorite(_id) ? <TbHeartMinus /> : <TbHeartPlus />}
 				</span>

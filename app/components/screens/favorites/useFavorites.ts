@@ -4,14 +4,21 @@ import { sanityClient } from '../../../sanity'
 import { queries } from '../../../queries'
 import { useSession } from 'next-auth/react'
 
-export const useFavorites = () => {
+export const useFavorites = (placeId: string) => {
 	const { data } = useSession()
 	const [favorites, setFavorites] = useState<IPlace[]>([])
+	const [currentFavoriteId, setCurrentFavoriteId] = useState<string>('')
+	const [isLoading, setIsLoading] = useState(false)
 
 	useEffect(() => {
 		sanityClient
-			.fetch<{ places: IPlace[] }>(queries.getFavorites(data?.user?.email))
-			.then(data => setFavorites(data.places))
+			.fetch<{ places: IPlace[]; _id: string }>(
+				queries.getFavorites(data?.user?.email)
+			)
+			.then(data => {
+				setFavorites(data.places)
+				setCurrentFavoriteId(data._id)
+			})
 			.catch(e => console.log(e))
 	}, [data])
 
@@ -20,11 +27,39 @@ export const useFavorites = () => {
 		[favorites]
 	)
 
+	const addToFavorites = useCallback(async () => {
+		await sanityClient
+			.patch(currentFavoriteId)
+			.setIfMissing({ places: [] })
+			.append('places', [
+				{
+					_ref: placeId,
+					_type: 'reference'
+				}
+			])
+			.commit()
+			.finally(() => setIsLoading(false))
+	}, [currentFavoriteId, placeId])
+
+	const removeFromFavorites = useCallback(async () => {
+		await sanityClient
+			.delete(currentFavoriteId)
+			.finally(() => setIsLoading(false))
+	}, [currentFavoriteId])
+
+	const toggleFavorite = useCallback(async () => {
+		setIsLoading(true)
+		if (checkFavorite(placeId)) await removeFromFavorites()
+		else await addToFavorites()
+	}, [currentFavoriteId, placeId])
+
 	return useMemo(
 		() => ({
 			favorites,
-			checkFavorite
+			checkFavorite,
+			toggleFavorite,
+			isLoading
 		}),
-		[favorites, checkFavorite]
+		[favorites, checkFavorite, toggleFavorite, isLoading]
 	)
 }
