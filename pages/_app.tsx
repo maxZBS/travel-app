@@ -14,6 +14,9 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
 				startPosition={0.3}
 				stopDelayMs={200}
 				height={3}
+				showOnShallow={false}
+				nonce="my-nonce"
+				options={{ easing: 'ease', speed: 500 }}
 			/>
 			<SessionProvider session={session}>
 				<AuthProvider Component={Component}>

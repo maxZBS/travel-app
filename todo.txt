@@ -17,6 +17,7 @@
   [] - Change classnames to clsx
   [] - Memo (rendering)
 	[] - Lighthouse оптимизация
+	[] - Long load speed place page
 	[] - PWA
 
 [] - Deploy
