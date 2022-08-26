@@ -7,13 +7,18 @@
 [x] - Secure route
 [x] - Footer icon home, fav, profile, exit
 [x] - Fav places
-		[] - Add
 		[x] - View
-		[] - Remove
-[] - Book trip and create row DB
-[] - Change styles place page
-[] - Next.js 12
+[x] - Change styles place page
+[x] - Next.js 12 + update packages
 [] - Fix map
-[] - PWA + lighthouse оптимизация
+
+[] - Optimization
+  [] - Replace material icons to react icons
+  [] - Change classnames to clsx
+  [] - Memo (rendering)
+	[] - Lighthouse оптимизация
+	[] - PWA
+
+[] - Deploy
 
 https://www.youtube.com/watch?v=1WmNXEVia8I&t=5158s
