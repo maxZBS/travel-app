@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC, memo } from 'react'
 
 import styles from './Header.module.scss'
 import Favorites from './Favorites'
@@ -16,4 +16,4 @@ const Header: FC<{ _id: string }> = ({ _id }) => {
 	)
 }
 
-export default Header
+export default memo(Header)

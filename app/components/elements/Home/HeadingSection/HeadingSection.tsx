@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC, memo } from 'react'
 import styles from './HeadingSection.module.scss'
 
 import mapImg from '@/assets/images/map.png'
@@ -16,4 +16,4 @@ const HeadingSection: FC = () => {
 	)
 }
 
-export default HeadingSection
+export default memo(HeadingSection)

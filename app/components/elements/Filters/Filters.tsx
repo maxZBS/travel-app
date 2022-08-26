@@ -1,5 +1,4 @@
 import { FC, useState } from 'react'
-import cn from 'classnames'
 import uniqBy from 'lodash/uniqBy'
 
 import styles from './Filters.module.scss'
@@ -37,9 +36,7 @@ const Filters: FC<IFilters> = ({ setPlaces, initialPlaces }) => {
 					<button
 						onClick={() => handleFilter(country)}
 						key={country}
-						className={cn({
-							[styles.active]: country === filter,
-						})}
+						className={country === filter ? styles.active : null}
 					>
 						{country}
 					</button>

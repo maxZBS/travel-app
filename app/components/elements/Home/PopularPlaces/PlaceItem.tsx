@@ -4,6 +4,7 @@ import { IPlace } from '@/types/place'
 import styles from './PopularPlaces.module.scss'
 
 import { urlFor } from '../../../../sanity'
+import { MdDeleteOutline } from 'react-icons/md'
 
 const PlaceItem: FC<{
 	place: IPlace
@@ -22,7 +23,7 @@ const PlaceItem: FC<{
 				</span>
 				{removeHandler && (
 					<button onClick={removeHandler}>
-						<span className="material-icons-outlined">delete</span>
+						<MdDeleteOutline size={26} />
 					</button>
 				)}
 			</a>

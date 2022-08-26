@@ -17,7 +17,7 @@
 		> button {
 			margin: 0 2rem;
 
-			> span {
+			> svg {
 				transition: color 0.4s ease;
 				font-size: 2rem;
 				color: $gray;
@@ -25,7 +25,7 @@
 
 			&:hover,
 			&.active {
-				> span {
+				> svg {
 					color: $accent;
 				}
 			}

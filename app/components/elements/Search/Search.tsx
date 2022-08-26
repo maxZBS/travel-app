@@ -1,7 +1,8 @@
-import { ChangeEvent, FC, KeyboardEvent, useState } from 'react'
+import { ChangeEvent, FC, memo, useState } from 'react'
 import { TypeSetState } from '@/types/common'
 import { IPlace } from '@/types/place'
 import styles from './Search.module.scss'
+import { MdSearch } from 'react-icons/md'
 
 interface ISearch {
 	setPlaces: TypeSetState<IPlace[]>
@@ -33,15 +34,15 @@ const Search: FC<ISearch> = ({ setPlaces, initialPlaces, setIsLoading }) => {
 
 	return (
 		<div className={styles.search}>
-			<span className='material-icons-outlined'>search</span>
+			<MdSearch />
 			<input
-				type='text'
+				type="text"
 				onChange={searchHandler}
 				value={searchTerm}
-				placeholder='Search place...'
+				placeholder="Search place..."
 			/>
 		</div>
 	)
 }
 
-export default Search
+export default memo(Search)

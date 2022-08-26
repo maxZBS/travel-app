@@ -18,10 +18,11 @@
 		border-color: rgba($accent, 0.5);
 	}
 
-	> span {
+	> svg {
 		margin-right: 10px;
 		color: $white;
 		opacity: 0.8;
+		font-size: 1.5rem;
 	}
 
 	> input {
