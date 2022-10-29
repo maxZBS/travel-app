@@ -1,24 +1,2 @@
-[x] - Compress image and change resolution
-[x] - Add new data with sanity
-[x] - Load from sanity
-[x] - Get place
-[x] - Auth
-[x] - AuthSession
-[x] - Secure route
-[x] - Footer icon home, fav, profile, exit
-[x] - Fav places
-		[x] - View
-[x] - Change styles place page
-[x] - Next.js 12 + update packages
-[x] - Fix map
-
-
-[] - Optimization
-  [x] - Replace material icons to react icons
-  [x] - Change classnames to clsx
-  [x] - Memo (rendering)
-	[] - Lighthouse оптимизация
-	[] - Long load speed place page
-	[] - PWA
-
+[x] - PWA
 [] - Deploy

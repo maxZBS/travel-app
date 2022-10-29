@@ -45,8 +45,8 @@ export const getStaticProps: GetStaticProps = async () => {
 
 	return {
 		props: {
-			initialPlaces: result,
-		},
+			initialPlaces: result
+		}
 	}
 }
 

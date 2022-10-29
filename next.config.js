@@ -1,3 +1,7 @@
+const withPWA = require('next-pwa')({
+	dest: 'public'
+})
+
 const STUDIO_REWRITE = {
 	source: '/studio/:path*',
 	destination:
@@ -6,7 +10,7 @@ const STUDIO_REWRITE = {
 			: '/travelapp/index.html'
 }
 
-module.exports = {
+module.exports = withPWA({
 	swcMinify: true,
 	reactStrictMode: true,
 	env: {
@@ -16,4 +20,4 @@ module.exports = {
 	images: {
 		domains: ['cdn.sanity.io']
 	}
-}
+})

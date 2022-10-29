@@ -47,6 +47,7 @@ const Footer = () => {
 				{data ? (
 					navItems.map(item => (
 						<button
+							aria-label={item.link}
 							className={pathname === item.link ? styles.active : ''}
 							onClick={async () => {
 								item.link === '/auth' ? await signOut() : await push(item.link)

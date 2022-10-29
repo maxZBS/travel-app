@@ -34,6 +34,7 @@ const Filters: FC<IFilters> = ({ setPlaces, initialPlaces }) => {
 				const country = place.location.country
 				return (
 					<button
+						aria-label={country}
 						onClick={() => handleFilter(country)}
 						key={country}
 						className={country === filter ? styles.active : null}

@@ -1,6 +1,6 @@
 import { FC, useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
-import { signUp } from 'next-auth-sanity/dist/client'
+import { signUp } from 'next-auth-sanity/client'
 import { signIn } from 'next-auth/react'
 import { toast } from 'react-toastify'
 import { CgProfile } from 'react-icons/cg'
@@ -29,8 +29,7 @@ const Auth: FC = () => {
 
 	const onSubmit: SubmitHandler<IAuthFields> = async data => {
 		if (isReg) {
-			const response = await signUp(data)
-			if (response.error) toast.error(response.error)
+			await signUp(data)
 		} else {
 			const response = await signIn('sanity-login', {
 				redirect: false,
@@ -56,7 +55,9 @@ const Auth: FC = () => {
 						placeholder="E-mail"
 						className={styles.input}
 					/>
-					{errors.email && <div className={styles.error}>{errors.email}</div>}
+					{errors.email && (
+						<div className={styles.error}>{errors.email.message}</div>
+					)}
 				</div>
 				<div className={styles.wrapper}>
 					<input
@@ -66,10 +67,14 @@ const Auth: FC = () => {
 						className={styles.input}
 					/>
 					{errors.password && (
-						<div className={styles.error}>{errors.password}</div>
+						<div className={styles.error}>{errors.password.message}</div>
 					)}
 				</div>
-				<button className={stylesButton.button} type="submit">
+				<button
+					aria-label={isReg ? 'Register' : 'Login'}
+					className={stylesButton.button}
+					type="submit"
+				>
 					<span className={stylesButton.text}>
 						{isReg ? 'Register' : 'Login'}
 					</span>
@@ -79,7 +84,10 @@ const Auth: FC = () => {
 				</button>
 			</form>
 			<div className={styles.changeType}>
-				<button onClick={() => setTypeForm(isReg ? 'login' : 'register')}>
+				<button
+					aria-label={`I want ${isReg ? 'login' : 'register'}`}
+					onClick={() => setTypeForm(isReg ? 'login' : 'register')}
+				>
 					I want {isReg ? 'login' : 'register'}
 				</button>
 			</div>

@@ -9,10 +9,14 @@ const BookTrip = () => {
 	}
 
 	return (
-		<button className={styles.button} onClick={bookTrip}>
+		<button
+			aria-label="Book a trip"
+			className={styles.button}
+			onClick={bookTrip}
+		>
 			<span className={styles.text}>Book a trip</span>
 			<span className={styles.icon}>
-				<AiFillCaretRight size='18' />
+				<AiFillCaretRight size="18" />
 			</span>
 		</button>
 	)

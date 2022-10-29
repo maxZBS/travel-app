@@ -4,7 +4,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "next dev",
-		"prebuild": "echo 'Building Sanity to public/studio' && cd studio && yarn && npx @sanity/cli build ../public/studio -y && echo 'Done'",
+		"prebuild": "echo 'Building Sanity to public/studio' && cd travelapp && yarn && npx @sanity/cli build ../public/studio -y && echo 'Done'",
 		"build": "next build",
 		"start": "next start",
 		"sanity": "cd travelapp && sanity start",
@@ -16,6 +16,7 @@
 		"lodash": "^4.17.21",
 		"next": "12",
 		"next-auth-sanity": "^1.4.0",
+		"next-pwa": "^5.6.0",
 		"next-sanity": "^0.8.2",
 		"nextjs-progressbar": "^0.0.14",
 		"react": "^18.2.0",
@@ -26,7 +27,8 @@
 		"react-simple-maps": "^3.0.0",
 		"react-toastify": "^9.0.1",
 		"sanity": "^2.29.3",
-		"sass": "^1.37.5"
+		"sass": "^1.37.5",
+		"sharp": "^0.30.7"
 	},
 	"devDependencies": {
 		"@types/lodash": "^4.14.178",

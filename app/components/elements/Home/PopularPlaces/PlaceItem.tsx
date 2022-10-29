@@ -22,7 +22,7 @@ const PlaceItem: FC<{
 					{place.location.city + ', ' + place.location.country}
 				</span>
 				{removeHandler && (
-					<button onClick={removeHandler}>
+					<button aria-label="Remove from favorites" onClick={removeHandler}>
 						<MdDeleteOutline size={26} />
 					</button>
 				)}
