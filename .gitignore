@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+/travelapp/node_modules
 
 # testing
 /coverage
@@ -18,6 +19,7 @@
 # misc
 .DS_Store
 *.pem
+.idea
 
 # debug
 npm-debug.log*

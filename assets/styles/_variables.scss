@@ -1,0 +1,22 @@
+$accent: #eb601e;
+$gray: #807e7f;
+$bg-color: #161617;
+$white: #e8e8e8;
+
+@mixin glassEffect() {
+	//	background: rgba(255, 255, 255, 0.03);
+	background-color: rgba(0, 0, 0, 0.3);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(15px);
+	-webkit-backdrop-filter: blur(15px);
+}
+
+@keyframes opac {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}

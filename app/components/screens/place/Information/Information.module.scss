@@ -1,0 +1,70 @@
+@import '../../../../../assets/styles/variables';
+
+.wrapper {
+	border-radius: 15px;
+	padding: 1.5rem;
+	width: 80%;
+	margin: 2rem auto 0;
+	@include glassEffect;
+
+	.map {
+		/* height: 180px;
+		background-color: $gray; */
+		margin-top: 1.5rem;
+	}
+
+	.heading {
+		display: flex;
+		align-items: center;
+		margin-bottom: 1rem;
+
+		> h1 {
+			color: $white;
+			font-size: 20px;
+			margin: 0 0 0 1rem;
+		}
+	}
+
+	> article {
+		color: $white;
+		opacity: 0.8;
+		line-height: 1.6;
+		font-size: 0.9rem;
+	}
+
+	.additional {
+		margin-top: 1rem;
+		display: flex;
+		align-items: center;
+
+		.rating {
+			margin-right: 1.5rem;
+			display: flex;
+			align-items: center;
+			padding: 10px 15px;
+			border-radius: 30px;
+			border: 2px solid rgba(255, 255, 255, 0.04);
+
+			> span {
+				color: $white;
+				font-weight: bold;
+				margin-left: 0.5rem;
+			}
+		}
+
+		.duration {
+			margin-right: 2rem;
+			display: flex;
+			align-items: center;
+			padding: 10px 15px;
+			border-radius: 30px;
+			border: 2px solid rgba(255, 255, 255, 0.04);
+
+			> span {
+				color: $white;
+				font-weight: bold;
+				margin-left: 0.5rem;
+			}
+		}
+	}
+}

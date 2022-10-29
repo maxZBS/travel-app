@@ -1,0 +1,58 @@
+@import '../../../../../assets/styles/variables';
+
+.wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 80%;
+	padding: 2rem 0;
+	margin: 0 auto;
+
+	.buttonWrapper {
+		border-radius: 50%;
+		width: 55px;
+		height: 55px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		@include glassEffect;
+		color: #e8e8e8;
+		font-size: 1.6em;
+		transition: color 0.4s ease-in-out;
+
+		&:hover {
+			color: $accent;
+		}
+	}
+
+	.bookmark {
+		position: relative;
+
+		> ul {
+			position: absolute;
+			@include glassEffect;
+			border-radius: 15px;
+			padding: 1rem 0;
+			z-index: 2;
+			top: calc(100% + 10px);
+			right: 0;
+			width: max-content;
+			box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+			animation: opac 0.4s;
+
+			> li {
+				> a {
+					text-decoration: none;
+					color: $white;
+					display: block;
+					padding: 0.5rem 2rem;
+					transition: color 0.2s ease-in-out;
+
+					&:hover {
+						color: $accent;
+					}
+				}
+			}
+		}
+	}
+}

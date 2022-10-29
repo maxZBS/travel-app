@@ -1,0 +1,48 @@
+@import '../../../../assets/styles/variables';
+
+.footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-color: rgba(15, 15, 16, 0.97);
+	z-index: 10;
+
+	> nav {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 70px;
+
+		> button {
+			margin: 0 2rem;
+
+			> svg {
+				transition: color 0.4s ease;
+				font-size: 2rem;
+				color: $gray;
+			}
+
+			&:hover,
+			&.active {
+				> svg {
+					color: $accent;
+				}
+			}
+		}
+	}
+
+	.go-to-login {
+		font-size: 1rem;
+		color: white;
+		padding: 0.7rem 1.5rem;
+		border: 1px solid rgba(white, 0.2);
+		border-radius: 30px;
+		transition: color 0.4s ease, border-color 0.4s ease;
+
+		&:hover {
+			color: $accent;
+			border-color: $accent;
+		}
+	}
+}
